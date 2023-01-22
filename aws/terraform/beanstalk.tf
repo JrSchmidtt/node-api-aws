@@ -14,7 +14,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk_environment" {
   # EC2 instance type
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
-    name      = "instanceType"
+    name      = "InstanceType"
     value     = var.machine_type
   }
 
@@ -28,7 +28,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk_environment" {
   # IAM instance profile
   # See https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/iam-instanceprofile.html
   setting {
-    namespace = "aws:autoscaling:lauchconfiguration"
+    namespace = "aws:autoscaling:launchconfiguration"
     name      = "IamInstanceProfile"
     value     = aws_iam_instance_profile.beanstalk_ec2_profile.name
   }
