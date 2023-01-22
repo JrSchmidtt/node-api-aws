@@ -4,9 +4,9 @@
 # Production environment
 module "Development" {
   source        = "../../terraform"
-  name          = "Development"                         # Name of the environment
-  description   = "Development environment Application" # Description of the environment
-  environment   = "Development"                         # Environment name
+  name          = "development"                         # Name of the environment
+  description   = "development environment application" # Description of the environment
+  environment   = "development"                         # Environment name
   machine_type  = "t2.micro"                            # Machine type                   
   max_instances = 1                                     # Max instances in          
 }
