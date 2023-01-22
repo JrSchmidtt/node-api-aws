@@ -27,8 +27,13 @@ The project was developed in VSC (Visual Studio Code), so install VSC (it may be
 
 Go to the folder and open the project folder. After opening the project, open a terminal, it can be the one integrated with VSC, navigate to the `infra/`, `env/prod` and `env/dev` folders and run the `terraform init` command inside them, now we have the terraform started and we can start using it. To create the infrastructure, run terraform apply in one of the Production (`env/prod`) or Development (`env/dev`) folders according to the desired environment.🏆
 
-##  🚀  Install Terraform on arch linux
+##  🚀 Install Terraform on arch linux
 
 ```bash
 pacman -Syu terraform
+```
+
+##  🐋  Build docker image.
+```bash
+docker build . -t my-app:v1
 ```
