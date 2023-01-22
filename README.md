@@ -1,28 +1,34 @@
-# Resumo
+# Resume
 
-Infraestrutura como código, utilizando Terraform para provisionamento, Ansible para as configurações e dependências, e AWS como provedor da infraestrutura.
+Infrastructure as code, using Terraform for provisioning, Ansible for configurations and dependencies, and AWS as the infrastructure provider.
 
-## 🔨 Funcionalidades do projeto
+## 🔨 Project features
 
-- Criar maquinas virtuais na EC2
-- Separar o seu codigo em 2 ambientes, um de produção e um de desenvolvimento
-- configurar as maquinas para executar uma API em Django automaticamente
-- preparar uma infraestrutura elastica
-- criar um Load Balancer para a sua aplicação
+- Create virtual machines on EC2
+- Separate your code into 2 environments, one for production and one for development
+- configure machines to run a Django API automatically
+- prepare an elastic infrastructure
+- create a Load Balancer for your application
 
-## ✔️ Técnicas e tecnologias utilizadas
+## ✔️ Techniques and technologies used
 
-Neste App são exploradas as seguintes técnicas e tecnologias:
+The following techniques and technologies are explored in this App:
 
-- **Criação de maquinas na EC2**: criação de maquinas virtuias no ambiente EC2 (Elastic Compute Cloud) da AWS
-- **Configuração das maquinas**: configura as maquians de forma automatica ultilizando o Ansible
-- **Criação de playbooks**: os playbooks são parte integral do ansible e descrevem quais os passos a serem seguidos
-- **Separação de ambientes**: 2 ambientes separados, construidos de forma automatica pelo Terraform, reultilizando codigo.
-- **Execução de APIs**: como iniciar um API automaticamente apos a configuração da maquina
-- **Criação do load balancer**: o load balancer é um programa ultilziado para distribuir requisições entre multiplas maquinas
+- **Creation of machines in EC2**: creation of virtual machines in the EC2 environment (Elastic Compute Cloud) of AWS
+- **Machine Configuration**: Automatically configure the machines using Ansible
+- **Creating playbooks**: playbooks are an integral part of ansible and describe the steps to be followed
+- **Separation of environments**: 2 separate environments, built automatically by Terraform, reusing code.
+- **Execution of APIs**: how to start an API automatically after machine configuration
+- **Creation of the load balancer**: the load balancer is a program used to distribute requests between multiple machines
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Open and run the project
 
-O projeto foi desenvolvido no VSC (Visual Studio Code), sendo assim, instale o VSC (pode ser uma versão mais recente) e, na tela inicial, procure a opção extenções, ou aperte Ctrl+Shift+X, e busque por HashiCorp Terraform, assim teremos o suporte do intellisense, tornando o trabalho de escrever o código mais rapido.
+The project was developed in VSC (Visual Studio Code), so install VSC (it may be a more recent version) and, on the home screen, look for the extensions option, or press Ctrl+Shift+X, and search for HashiCorp Terraform , so we will have the support of intellisense, making the work of writing the code faster.
 
-Vá até a paste a abra a pasta do projeto. Apos abrir o projeto abra um terminal, pode ser o integrado com o VSC, navegue até as pastas `infra/`,`env/Prod` e `env/DEV` e execute o comando `terraform init` dentro delas, agora temos o terraform iniciado e podemos começar a ultiliza-lo. Para criar a infraestrutura, execute o terraform apply em uma das pastas de Produção (`env/Prod`) ou de Desenvolvimento (`env/DEV`) de acordo com o ambiente desejado.🏆
+Go to the folder and open the project folder. After opening the project, open a terminal, it can be the one integrated with VSC, navigate to the `infra/`, `env/prod` and `env/dev` folders and run the `terraform init` command inside them, now we have the terraform started and we can start using it. To create the infrastructure, run terraform apply in one of the Production (`env/prod`) or Development (`env/dev`) folders according to the desired environment.🏆
+
+##  🚀  Install Terraform on arch linux
+
+```bash
+pacman -Syu terraform
+```
