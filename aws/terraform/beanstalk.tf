@@ -7,9 +7,9 @@ resource "aws_elastic_beanstalk_application" "beanstalk_application" {
 }
 
 resource "aws_elastic_beanstalk_environment" "beanstalk_environment" {
-  name = var.environment
-  application = aws_elastic_beanstalk_application.beanstalk_application.name
-  solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running Docker"              # Docker platform
+  name                = var.environment
+  application         = aws_elastic_beanstalk_application.beanstalk_application.name
+  solution_stack_name = "64bit Amazon Linux 2 v3.5.3 running Docker" # Docker platform
 
   # EC2 instance type
   setting {
@@ -22,7 +22,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalk_environment" {
   setting {
     namespace = "aws:autoscaling:asg"
     name      = "MaxSize"
-    value     =  var.max_instances
+    value     = var.max_instances
   }
 
   # IAM instance profile

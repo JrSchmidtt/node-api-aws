@@ -16,22 +16,22 @@ variable "description" {
 # The environment is a string, but it must be a valid environment name
 # See https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features.environments.html
 variable "environment" {
-  type        = string              # Type of the variable
-  description = "Environment name"  # Description of the variable
-  default     = "dev"               # Default value of the variable
+  type        = string             # Type of the variable
+  description = "Environment name" # Description of the variable
+  default     = "dev"              # Default value of the variable
 }
 
 # The machine type is a string, but it must be a valid EC2 instance type
 # See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html
 variable "machine_type" {
-  type        = string              # Type of the variable
-  description = "Machine type"      # Description of the variable
-  default     = "t2.micro"          # Default value of the variable
+  type        = string         # Type of the variable
+  description = "Machine type" # Description of the variable
+  default     = "t2.micro"     # Default value of the variable
 }
 
 # The max instances is a number, but it must be a valid number of instances
 variable "max_instances" {
-  type        = number              # Type of the variable
-  description = "Max instances"     # Description of the variable
-  default     = 1                   # Default value of the variable
+  type        = number          # Type of the variable
+  description = "Max instances" # Description of the variable
+  default     = 1               # Default value of the variable
 }
