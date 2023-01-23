@@ -33,7 +33,24 @@ Go to the folder and open the project folder. After opening the project, open a 
 pacman -Syu terraform
 ```
 
-##  🐋  Build docker image.
+# Push image to ECR 
+
+## Retrieve an authentication token and authenticate your Docker client against your registry.
 ```bash
-docker build . -t my-app:v1
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com
+```
+
+##  🐋 Build your Docker image using the following command. For information on creating a Docker file from scratch, see the instructions here.
+```bash
+docker build -t production .
+```
+
+## Once the build completes, tag your image so you can push it to this repository:
+```bash
+docker tag production:latest <ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/production:latest
+```
+
+## Run the following command to push this image to the newly created AWS repository:
+```bash
+docker push <ACCOUNT-ID>.dkr.ecr.us-east-1.amazonaws.com/production:latest
 ```
