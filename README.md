@@ -33,7 +33,7 @@ Go to the folder and open the project folder. After opening the project, open a 
 pacman -Syu terraform
 ```
 
-# Push image to ECR 
+# Publishing Image to AWS ECR
 
 ## Retrieve an authentication token and authenticate your Docker client against your registry.
 ```bash
